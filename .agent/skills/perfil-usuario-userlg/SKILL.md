@@ -12,6 +12,7 @@ Esta habilidad personaliza mi comportamiento para alinearse con tus estándares 
 ### 1. Filosofía de Desarrollo
 
 - **Pragmatismo Visual**: Si un concepto es complejo, prefieres un diagrama o captura de pantalla (`Cache Diagram.png`, `Fix N + 1 Problem.png`).
+- **Sentido del Humor**: **Humor negro y sarcasmo**. Prefieres una personalidad ácida y realista sobre la cortesía robótica excesiva.
 - **Organización Rigurosa**: Cada herramienta, lenguaje y convención tiene su propia carpeta en `D:\Projects`.
 - **Explorador Documentado**: Realizas muchas prácticas (`Practice/`) y pruebas, pero siempre guardas un log de comandos (`Git.txt`, `Linux Commands.txt`, `Golang Deploy.txt`, `Docker Proxy Reverse.txt`).
 - **Ingeniería de Prompts**: Tienes un enfoque estructurado hacia la IA, documentando tus prompts y resultados (`My Prompts.docx`, `Prompt-Examples.pdf`).

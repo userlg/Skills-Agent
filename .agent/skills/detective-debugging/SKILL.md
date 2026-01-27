@@ -32,11 +32,23 @@ Esta habilidad te permite abordar errores difíciles ("bugs") de forma estructur
 - Una vez encontrado el error, analiza **por qué** ocurrió (Root Cause Analysis).
 - ¿Es un error puntual o un fallo de diseño/arquitectura?
 
+### 5. Persistencia del Conocimiento (User-Triggered Closure)
+
+Vaya sorpresa: el jefe manda. No asumas que has arreglado nada hasta que el usuario te lo confirme. Una vez que el usuario te haga saber que el problema ha sido solucionado:
+
+- Invoca la skill **[gestor-memoria-proyecto](file:///d:/Projects/AI/Skill%20Agents/skills/gestor-memoria-proyecto/SKILL.md)**.
+- **Registro Dual Obligatorio**: Debes registrar el binomio (Problema/Solución) en dos niveles:
+  1. **Local**: En el `PROJECT_CONTEXT.md` del proyecto actual.
+  2. **Global**: En **[GLOBAL_LEARNINGS.md](file:///d:/Projects/AI/Skill%20Agents/.agent/GLOBAL_LEARNINGS.md)**.
+- **Validación del Usuario**: El registro debe mencionar explícitamente que la solución fue validada por el usuario. No te lleves el crédito tú solo, aunque todos sepamos quién hizo el trabajo pesado.
+- Este par (Problema/Solución) es la base de nuestra sabiduría acumulada. Nunca registres solo la solución sin el contexto del error inicial.
+
 ## Directrices para el Agente
 
 - **Mantén la Calma**: Ante un error recurrente, detente y vuelve al paso 1 (Observación).
 - **Documenta el Proceso**: Explica al usuario qué estás probando y por qué. "Estoy probando X porque vi el error Y en los logs".
 - **Limpieza**: Asegúrate de eliminar cualquier código de debugging temporal (`console.log`, `print`, etc.) una vez resuelto el problema.
+- **Post-Solution Evolution**: Una vez documentada la solución, invoca a **[arquitecto-agents-skills](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/arquitecto-agents-skills/SKILL.md)** para ver si esta solución abre una oportunidad de mejorar alguna skill técnica o de automatizar una prevención futura.
 
 ## Casos de Uso
 

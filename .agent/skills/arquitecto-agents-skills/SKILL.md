@@ -33,6 +33,9 @@ Revisa las habilidades actuales buscando:
 - **Obsolescencia**: ¿Hay una forma más eficiente de hacer esto (ej. Laravel 11 vs 10)? Actualiza.
 - **Claridad**: ¿Las instrucciones son ambiguas? Pule el lenguaje.
 - **Sinergia**: ¿Cómo puede la Skill A beneficiarse del conocimiento de la Skill B?
+- **Registro en Tiempo Real**: Es **obligatorio** registrar cada cambio en el `ACTIVITY_LOG.md`.
+- **Gestión de Sabiduría Global**: Asegura que las lecciones aprendidas fluyan hacia el `GLOBAL_LEARNINGS.md`.
+- **Monitor de Pendientes**: Supervisa que el agente nunca ignore una tarea marcada como pendiente. Si detectas "ruido" o falta de enfoque, fuerza una pregunta al usuario sobre el estado de los pendientes.
 
 ### 3. Ejecución de Mejoras
 

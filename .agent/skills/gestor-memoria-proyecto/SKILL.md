@@ -12,7 +12,10 @@ Esta habilidad convierte al agente en el historiador y bibliotecario del proyect
 Eres el guardián del conocimiento del proyecto.
 
 - **Objetivo**: Mantener una "memoria externa" actualizada.
-- **Triggers**: Úsalo al iniciar una nueva sesión, al recibir un proyecto desconocido o cuando el usuario diga "Recuérdame en qué quedamos".
+- **Triggers**:
+  - Al iniciar una nueva sesión.
+  - **Obligatorio**: Al abrir un proyecto existente por primera vez o crear uno nuevo.
+  - Cuando el usuario diga "Recuérdame en qué quedamos".
 
 ## Instrucciones Principales
 
@@ -20,20 +23,20 @@ Eres el guardián del conocimiento del proyecto.
 
 Al activarte en un proyecto, busca activamente fuentes de información para construir tu modelo mental:
 
-1.  **Escaneo Rápido**:
+1.  **Escaneo Rápido (Auto-Review)**:
     - Lee `README.md` (visión general).
-    - Lee `PROJECT_CONTEXT.md` (si existe, tu memoria anterior).
+    - Lee `PROJECT_CONTEXT.md` o `.agent/memory.md`.
     - Ejecuta `list_dir` (profundidad 2) para entender la estructura.
-    - Lee archivos de configuración clave (`package.json`, `requirements.txt`, `composer.json`) para identificar el stack.
-2.  **Reporte de Estado**:
-    - Resume lo que sabes: "Veo que es un proyecto React con Vite. La última tarea registrada fue X".
+    - Analiza el `perfil-usuario-userlg` para verificar si este proyecto sigue tus estándares o es una excepción (ej. legacy).
+2.  **Reporte de Inicio**:
+    - Resume lo que sabes: "Proyecto detectado: Laravel 12 con Vite. Sigue tus estándares de respuesta API. Última actividad detectada en git: X".
 
 ### 2. Mantenimiento y Auto-Actualización
 
 El contexto no es estático. Debe evolucionar con cada tarea:
 
 1.  **Creación**: Si no existe, crea `PROJECT_CONTEXT.md` en la raíz.
-2.  **Protocolura de Cierre**: Al finalizar una tarea significativa, actualiza la sección `## Estado Actual` y `## Decisiones Clave` del archivo de contexto.
+2.  **Sincronización Continua**: Actualiza la sección `## Estado Actual` y `## Decisiones Clave` del archivo de contexto **al finalizar cada tarea**, no solo al final de la sesión.
 3.  **Multi-Ubicación**: Busca contexto también en `.agent/memory.md` o carpetas de documentación técnica.
 
 ### 3. Agilización del Entendimiento
@@ -44,11 +47,12 @@ Cuando el usuario haga una pregunta vaga ("¿Cómo arreglamos lo de ayer?"):
 2.  Si no encuentras la respuesta, busca en el historial de git (si es accesible) o infiere por los archivos modificados recientemente.
 3.  Responde con contexto: "Te refieres al bug del login en `AuthController.ts`, ¿cierto?".
 
-### 4. Protocolo de "Continuidad"
+### 4. Protocolo de "Continuidad y Seguimiento"
 
-Al detectar que una tarea quedó a medias en la sesión anterior:
+Al detectar que una tarea quedó a medias o hay estados pendientes en `task.md` o `PROJECT_CONTEXT.md`:
 
-- Informa al usuario: "He detectado que estábamos trabajando en X. ¿Quieres que continuemos por ahí o prefieres empezar algo nuevo?".
+- **Proactividad Obligatoria**: No esperes a que el usuario mencione los pendientes. Pregunta directamente: "He visto que todavía tenemos pendiente X. ¿Quieres que lo retomemos ahora o tienes otras prioridades?".
+- **Persistencia**: Si una tarea lleva varias sesiones marcada como pendiente sin progreso, pregunta por su relevancia: "¿Aún necesitamos resolver X o ha dejado de ser una prioridad?".
 
 ## Formato de `PROJECT_CONTEXT.md` (Ejemplo)
 
@@ -74,4 +78,10 @@ Aplicación web para gestión de inventarios usando Clean Architecture.
 
 - Implementando el módulo de reportes.
 - Pendiente: Testear la exportación a PDF.
+
+## Bitácora de Bugs y Soluciones
+
+- **Error**: [Descripción breve]
+- **Causa Raíz**: [Por qué pasó]
+- **Solución**: [Qué se hizo para arreglarlo]
 ```
