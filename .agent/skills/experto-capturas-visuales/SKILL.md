@@ -35,54 +35,14 @@ Usa herramientas de automatización de navegador para tomar capturas "limpias":
 
 ### 3. Automatización (Puppeteer Script)
 
-Si la herramienta de navegador falla o requieres control total, usa un script de Puppeteer.
+Se ha implementado el archivo `capture-script.js` en la raíz del proyecto para automatizar este proceso. Este script maneja:
 
-- **Script Template**:
-  Crea un archivo `capture-script.js` con el siguiente contenido (asegurando poner `process.env.HOME = process.env.USERPROFILE` en Windows):
+- **Viewports**: Desktop, Mobile (iPhone X), Tablet.
+- **Rutas**: Navegación automática por rutas críticas.
+- **Windows Fix**: Manejo de variables de entorno para evitar fallos de permisos.
 
-  ```javascript
-  import puppeteer from "puppeteer";
-  import fs from "fs";
-  import path from "path";
-
-  const CAPTURE_DIR = path.resolve("captures");
-  if (!fs.existsSync(CAPTURE_DIR)) fs.mkdirSync(CAPTURE_DIR);
-
-  const capture = async () => {
-    // Windows Fix
-    if (process.platform === "win32") {
-      process.env.HOME = process.env.USERPROFILE;
-    }
-
-    const browser = await puppeteer.launch({
-      headless: "new",
-      args: ["--no-sandbox"],
-    });
-    const page = await browser.newPage();
-    await page.goto("http://localhost:5173", { waitUntil: "networkidle0" });
-
-    // Definir Viewports
-    const viewports = [
-      { width: 1920, height: 1080, name: "desktop" },
-      { width: 375, height: 812, name: "mobile", isMobile: true },
-      { width: 768, height: 1024, name: "tablet" },
-    ];
-
-    for (const vp of viewports) {
-      await page.setViewport(vp);
-      await page.screenshot({
-        path: path.join(CAPTURE_DIR, `${vp.name}-home.png`),
-        fullPage: true,
-      });
-    }
-
-    // TODO: Agregar lógica para navegar y capturar 5+ imágenes adicionales (detalles, modales, etc.)
-
-    await browser.close();
-    console.log("Capturas guardadas en " + CAPTURE_DIR);
-  };
-  capture();
-  ```
+Para ejecutarlo, usa el comando:
+`node capture-script.js`
 
 ### 4. Edición y Retoque (Post-Processing)
 

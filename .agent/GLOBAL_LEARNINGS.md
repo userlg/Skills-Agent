@@ -4,9 +4,11 @@ Este archivo es la memoria de largo plazo del sistema de agentes. Aquí se conso
 
 ## 🧠 Patrones y Soluciones Universales
 
-### [Categoría: Laravel/PHP]
+### [Categoría: Editor / Antigravity]
 
-- (Pendiente de registro tras la primera solución...)
+- **Patrón del Error**: "Command 'glassit.increase' not found" o similares.
+- **Contexto**: Antigravity / VS Code con extensiones de transparencia.
+- **Solución Maestra**: Verificar que el plugin `GlassIt-VSC` esté habilitado y que la configuración `glassit.alpha` esté presente en `settings.json`. En caso de fallo persistente, re-mapear los atajos de teclado o reinstalar la extensión específica detectada por el sistema.
 
 ### [Categoría: Docker/Infraestructura]
 

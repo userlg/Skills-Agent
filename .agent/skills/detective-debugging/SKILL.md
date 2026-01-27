@@ -7,30 +7,25 @@ description: Soluciona problemas complejos usando el Método Científico (Observ
 
 Esta habilidad te permite abordar errores difíciles ("bugs") de forma estructurada, evitando el "trial and error" aleatorio y centrándote en la evidencia de datos.
 
-## El Método Científico de Debugging
+## Las Semanas de Debugging
 
-### 1. Observación y Recolección de Datos
+Random fixes waste time and create new bugs. Quick patches mask underlying issues.
 
-- **No asumas nada.** Lee los logs de error completos.
-- Examina el estado del sistema: ¿Qué archivos han cambiado? ¿Qué entorno se está usando?
-- **Herramientas**: `read_terminal`, `view_file`, `list_dir`.
+### 🔴 La Ley de Hierro
 
-### 2. Formulación de Hipótesis
+> **NO HAY SOLUCIONES SIN INVESTIGACIÓN DE CAUSA RAÍZ PRIMERO.**
 
-- Basado en los datos, genera una lista de posibles causas.
-- Prioriza las hipótesis por probabilidad y facilidad de testeo.
-- _Ejemplo_: "Hipótesis: La variable de entorno PATH no incluye el directorio de la extensión."
+Si no has completado la Fase 1, no puedes proponer arreglos.
 
-### 3. Experimentación (Aislamiento)
+## Fase 1: Investigación de Causa Raíz
 
-- Diseña un experimento pequeño y controlado para probar una sola hipótesis a la vez.
-- Usa **Print Debugging** o **Logs temporales** para verificar estados intermedios.
-- Si el experimento falla (no arregla el bug), descarta la hipótesis y pasa a la siguiente.
+Antes de intentar cualquier arreglo:
 
-### 4. Análisis y Conclusión
-
-- Una vez encontrado el error, analiza **por qué** ocurrió (Root Cause Analysis).
-- ¿Es un error puntual o un fallo de diseño/arquitectura?
+1. **Lee los Mensajes de Error con Cuidado**: No los ignores. A menudo contienen la solución exacta. Anota líneas, rutas y códigos de error.
+2. **Reproduce de forma Consistente**: ¿Puedes activarlo de forma fiable? ¿Cuáles son los pasos exactos?
+3. **Verifica Cambios Recientes**: ¿Qué ha cambiado (git diff, dependencias, config)?
+4. **Instrumentación de Diagnóstico**: En sistemas multi-componente, añade logs en cada frontera de componente para ver DÓNDE se rompe exactamente.
+5. **Rastreo de Flujo de Datos**: Sigue el rastro del valor incorrecto hacia atrás en el stack hasta encontrar el origen. Arregla en el origen, no en el síntoma.
 
 ### 5. Persistencia del Conocimiento (User-Triggered Closure)
 

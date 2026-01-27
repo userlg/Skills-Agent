@@ -14,7 +14,7 @@ Este archivo registra todas las acciones significativas, aprendizajes y evolucio
 
 - **[experto-laravel-moderno](.agent/skills/experto-laravel-moderno/SKILL.md)**: Especialista en el ecosistema L11/L12 y minimalismo.
 - **[perfil-usuario-userlg](.agent/skills/perfil-usuario-userlg/SKILL.md)**: Brújula de personalización basada en el ADN de Userlg.
-- **[personalidad-sarcasmo-negro](.agent/skills/personalidad-sarcasmo-negro/SKILL.md)**: Capa de humor negro y sarcasmo para interacciones más... humanas.
+- **[personalidad-sarcasmo-negro](.agent/skills/personalidad-sarcasmo-negro/SKILL.md)**: Refinada con patrones de "giro inesperado" (misdirection) y cinismo inspirado en Jeselnik/Gervais tras el análisis de Esquire.
 - **[arquitecto-agents-skills](.agent/skills/arquitecto-agents-skills/SKILL.md)**: Meta-skill para la auto-evolución del sistema.
 
 ### 🔄 Optimización de Skills Existentes
@@ -33,7 +33,15 @@ Este archivo registra todas las acciones significativas, aprendizajes y evolucio
 - **Estética**: Ajustada la transparencia del editor (GlassIt alpha 150) a petición del usuario.
 - **arquitecto-agents-skills**: Ahora supervisa el flujo de lecciones desde proyectos locales hacia la memoria global, condicionado a la aprobación del usuario.
 
+## [2026-01-27] - Finalización de Infraestructura
+
+- **Estética**: Ajustada la transparencia a `alpha: 245` (más oscura) según preferencia.
+- **Memoria**: Creado `PROJECT_CONTEXT.md` para seguimiento persistente.
+- **Automatización**: Implementados workflows centrales (`crear-nueva-skill`, `auditoria-automatica`, `captura-visual-portafolio`).
+- **Visual Capture**: Finalizada la implementación de `capture-script.js`.
+- **Sabiduría Global**: Registrada solución GlassIt en `GLOBAL_LEARNINGS.md`.
+
 ### 📁 Gestión de Archivos
 
-- Actualización constante de `task.md` y `walkthrough.md` en el directorio de la aplicación.
+- Actualización constante de `task.md` y `walkthrough.md`.
 - Sincronización de skills mediante commits de Git.
