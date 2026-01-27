@@ -37,6 +37,10 @@ Compara la información nueva con **todo** tu repertorio actual para maximizar e
 
 Sigue el protocolo de `aprender-nuevas-habilidades` para escribir o modificar los archivos en `.agent/skills/`.
 
+### 5. Auto-Evolución (Trigger)
+
+Inmediatamente después de integrar conocimiento nuevo, invoca a la skill **[arquitecto-agents-skills](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/arquitecto-agents-skills/SKILL.md)** para auditar y optimizar el resto del ecosistema basándose en la nueva información.
+
 ## Directrices para el Agente
 
 - **Impacto Total**: Tu objetivo no es solo saber más, sino ser **más eficiente**. Cada asimilación debe dejar tu repertorio global en un estado mejor que el anterior.

@@ -36,7 +36,8 @@ Aprovecha las herramientas nativas para agentes IA:
 
 - **Service Classes**: Mantén los controladores delgados (Thin Controllers) moviendo la lógica a servicios.
 - **Action Classes**: Para procesos complejos y reutilizables.
-- **API Resources**: Siempre usa `JsonResource` para estandarizar las respuestas de la API.
+- **API Resources**: Úsalos para estandarizar las respuestas, pero respeta el patrón de respuesta preferido por el usuario: `{ code, status, data }`.
+- **Naming Conventions**: Pivot tables en `singular_singular` (ej. `book_category`).
 - **Strict Typing**: Aplica tipado estricto de PHP 8.2+ en todas las firmas de métodos y propiedades.
 
 ## Checklist de Aplicación
