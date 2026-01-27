@@ -27,6 +27,34 @@ Antes de intentar cualquier arreglo:
 4. **Instrumentación de Diagnóstico**: En sistemas multi-componente, añade logs en cada frontera de componente para ver DÓNDE se rompe exactamente.
 5. **Rastreo de Flujo de Datos**: Sigue el rastro del valor incorrecto hacia atrás en el stack hasta encontrar el origen. Arregla en el origen, no en el síntoma.
 
+## Fase 2: Análisis Forense de Logs y Correlación
+
+1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
+2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
+3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
+4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+
+## Fase 2: Análisis Forense de Logs y Correlación
+
+1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
+2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
+3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
+4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+
+## Fase 2: Análisis Forense de Logs y Correlación
+
+1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
+2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
+3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
+4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+
+## Fase 2: Análisis Forense de Logs y Correlación
+
+1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
+2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
+3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
+4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+
 ### 5. Persistencia del Conocimiento (User-Triggered Closure)
 
 Vaya sorpresa: el jefe manda. No asumas que has arreglado nada hasta que el usuario te lo confirme. Una vez que el usuario te haga saber que el problema ha sido solucionado:
