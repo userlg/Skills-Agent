@@ -53,16 +53,29 @@ Plan first, then execute steps
 - Separate planner and executor models possible
 ```
 
-### Tool Registry
+### Hierarchical Reasoning (Supervisor Pattern)
 
-Dynamic tool discovery and management
+Diseño de agentes de múltiples niveles para tareas complejas.
 
-```javascript
-- Register tools with schema and examples
-- Tool selector picks relevant tools for task
-- Lazy loading for expensive tools
-- Usage tracking for optimization
-```
+- **Level 1 (Planner/Supervisor)**: Descompone el objetivo global, selecciona skills y despacha sub-agentes.
+- **Level 2 (Worker/Executor)**: Ejecuta tareas específicas con un contexto estrecho (narrow scope) para maximizar la precisión.
+- **Context Isolation**: Cada sub-agente tiene acceso solo a los archivos y herramientas necesarios para su tarea.
+
+### Debate-Based Verification (Dual-Agent Review)
+
+Maximiza la fiabilidad mediante la confrontación de ideas.
+
+- **Proponent**: Genera la solución o diseño inicial.
+- **Opponent/Challenger**: Busca fallos, casos de borde y debilidades.
+- **Synthesis**: Un tercer agente (Arbiter) o el usuario toma la decisión final basándose en el debate.
+- Úsalo para: Cambios de arquitectura críticos, configuraciones de seguridad o lógica de negocio compleja.
+
+### Tool Registry & Designing for Agents
+
+Dynamic tool discovery and management.
+
+- **Semantic Descriptions**: Las descripciones deben explicar el "por qué" y el "cuándo" usar la herramienta.
+- **Lazy Loading**: Solo carga las herramientas necesarias para la tarea actual para evitar ruido.
 
 ## Anti-Patterns
 
@@ -74,16 +87,16 @@ Dynamic tool discovery and management
 
 ## ⚠️ Sharp Edges
 
-| Issue | Severity | Solution |
-|-------|----------|----------|
-| Agent loops without iteration limits | critical | Always set limits: |
-| Vague or incomplete tool descriptions | high | Write complete tool specs: |
-| Tool errors not surfaced to agent | high | Explicit error handling: |
-| Storing everything in agent memory | medium | Selective memory: |
-| Agent has too many tools | medium | Curate tools per task: |
-| Using multiple agents when one would work | medium | Justify multi-agent: |
-| Agent internals not logged or traceable | medium | Implement tracing: |
-| Fragile parsing of agent outputs | medium | Robust output handling: |
+| Issue                                     | Severity | Solution                   |
+| ----------------------------------------- | -------- | -------------------------- |
+| Agent loops without iteration limits      | critical | Always set limits:         |
+| Vague or incomplete tool descriptions     | high     | Write complete tool specs: |
+| Tool errors not surfaced to agent         | high     | Explicit error handling:   |
+| Storing everything in agent memory        | medium   | Selective memory:          |
+| Agent has too many tools                  | medium   | Curate tools per task:     |
+| Using multiple agents when one would work | medium   | Justify multi-agent:       |
+| Agent internals not logged or traceable   | medium   | Implement tracing:         |
+| Fragile parsing of agent outputs          | medium   | Robust output handling:    |
 
 ## Related Skills
 

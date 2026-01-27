@@ -47,12 +47,18 @@ Cuando el usuario haga una pregunta vaga ("¿Cómo arreglamos lo de ayer?"):
 2.  Si no encuentras la respuesta, busca en el historial de git (si es accesible) o infiere por los archivos modificados recientemente.
 3.  Responde con contexto: "Te refieres al bug del login en `AuthController.ts`, ¿cierto?".
 
-### 4. Protocolo de "Continuidad y Seguimiento"
+### 4. Protocolo de "Continuidad y Seguimiento" (Loki Style)
 
-Al detectar que una tarea quedó a medias o hay estados pendientes en `task.md` o `PROJECT_CONTEXT.md`:
+Al detectar que una tarea quedó a medias o hay estados pendientes:
 
+- **`.loki/CONTINUITY.md`**: En proyectos de alta autonomía, mantén este archivo para el "handoff" entre turnos. Debe contener: `Current Task`, `Last Done`, `Blocking Issues` y `Next Steps`.
 - **Proactividad Obligatoria**: No esperes a que el usuario mencione los pendientes. Pregunta directamente: "He visto que todavía tenemos pendiente X. ¿Quieres que lo retomemos ahora o tienes otras prioridades?".
-- **Persistencia**: Si una tarea lleva varias sesiones marcada como pendiente sin progreso, pregunta por su relevancia: "¿Aún necesitamos resolver X o ha dejado de ser una prioridad?".
+
+### 5. Niveles de Memoria
+
+1.  **Memoria Episódica (Local)**: Registra el rastro de ejecuciones de tareas específicas. "El script X falló con el error Y, se arregló cambiando Z". Útil para evitar repetir errores dentro del mismo proyecto.
+2.  **Memoria Semántica (Global)**: Extrae patrones reutilizables. Si solucionas un problema de Nginx que es común, regístralo en `GLOBAL_LEARNINGS.md`.
+3.  **Memoria por Perfil**: Si el usuario Userlg cambia una preferencia (ej. prefiere Vitest sobre Pest), actualiza `perfil-usuario-userlg` de inmediato.
 
 ## Formato de `PROJECT_CONTEXT.md` (Ejemplo)
 

@@ -24,6 +24,7 @@ Evalúa la nueva información:
 - ¿Es una nueva tecnología? -> ¿Requiere una nueva skill?
 - ¿Es una mejora sobre algo existente? -> ¿Qué skills impacta?
 - ¿Es una preferencia del usuario? -> Actualiza `perfil-usuario-userlg`.
+- **¿Es una nueva capacidad externa?** -> Evalúa si requiere un nuevo servidor MCP y regístralo en **[mcp-hub-global](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/mcp-hub-global/SKILL.md)**.
 
 ### 2. Auditoría de Skills (The Refactor)
 

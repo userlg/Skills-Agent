@@ -35,8 +35,10 @@ Este archivo registra todas las acciones significativas, aprendizajes y evolucio
 
 ## [2026-01-27] - Ciclo de Auto-Evolución y Optimización
 
-- **Perfeccionamiento de Humor**: Inyectados nuevos patrones de humor negro y sarcasmo cínico tras el análisis de fuentes sugeridas por el usuario. Ahora con un 20% más de "veneno" intelectual y analogías inquietantes.
-- **Consolidación**: Unificado `detective-debugging` y eliminado `systematic-debugging`.
+- **MCP Hub Global**: Creada la skill `mcp-hub-global` para centralizar y gestionar el acceso a Notion, GitHub, context7 y TestSprite desde cualquier proyecto.
+- **Expansión "Awesome Skills"**: Integradas 5 nuevas habilidades clave basadas en el repositorio de sickn33.
+- **Refactor de Arquitectura**: Evolucionadas skills de arquitectura y memoria para soportar razonamiento jerárquico y memoria de continuidad (Loki Style).
+- **Perfeccionamiento de Humor**: Inyectados nuevos patrones de humor negro y sarcasmo cínico.
 - **Refinamiento**: Actualizadas meta-skills (`arquitecto-agents-skills`, `optimizador-prompts-maestro`) con capacidades de limpieza recursiva.
 - **Perfil**: Sincronizadas preferencias de transparencia (alpha 245) y catálogo de workflows.
 - **Limpieza**: Eliminadas redundancias y corregidas duplicaciones estructurales en las definiciones de skills.
