@@ -69,6 +69,7 @@ Dado que estás optimizando para _ti mismo_ o agentes similares:
 - Especifica claramente los **Tools** disponibles si el prompt es para un agente con herramientas.
 - Si el prompt es para generación de código, exige **Clean Code** y **Comentarios Explicativos** explícitamente.
 - **Auto-Corrección**: Incita al agente a revisar su propio output contra las restricciones dadas.
+- **Optimización de Skills**: Aplica estos principios para refinar las propias definiciones de `SKILL.md`. Si una instrucción es redundante o poco clara, mejórala.
 
 ## Cuando usar esta habilidad
 

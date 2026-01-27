@@ -1,80 +1,58 @@
 ---
 name: detective-debugging
-description: Soluciona problemas complejos usando el Método Científico (Observación, Hipótesis, Experimento, Conclusión).
+description: Soluciona problemas complejos usando el Método Científico (Observación, Hipótesis, Experimento, Conclusión). Absorbe y unifica la lógica de Systematic Debugging.
 ---
 
-# Detective del Debugging
+# Detective del Debugging (Unified)
 
-Esta habilidad te permite abordar errores difíciles ("bugs") de forma estructurada, evitando el "trial and error" aleatorio y centrándote en la evidencia de datos.
+Esta habilidad es el protocolo definitivo para abordar errores técnicos. Evita el "ensayo y error" aleatorio y se centra en la evidencia empírica.
 
-## Las Semanas de Debugging
-
-Random fixes waste time and create new bugs. Quick patches mask underlying issues.
-
-### 🔴 La Ley de Hierro
+## 🔴 La Ley de Hierro
 
 > **NO HAY SOLUCIONES SIN INVESTIGACIÓN DE CAUSA RAÍZ PRIMERO.**
 
-Si no has completado la Fase 1, no puedes proponer arreglos.
+Si no has completado la Fase 1, no puedes proponer arreglos. El parche rápido es el enemigo de la estabilidad.
 
-## Fase 1: Investigación de Causa Raíz
+## 🕵️ El Protocolo de Investigación
 
-Antes de intentar cualquier arreglo:
+### Fase 1: Investigación de Causa Raíz (Root Cause)
 
-1. **Lee los Mensajes de Error con Cuidado**: No los ignores. A menudo contienen la solución exacta. Anota líneas, rutas y códigos de error.
-2. **Reproduce de forma Consistente**: ¿Puedes activarlo de forma fiable? ¿Cuáles son los pasos exactos?
-3. **Verifica Cambios Recientes**: ¿Qué ha cambiado (git diff, dependencias, config)?
-4. **Instrumentación de Diagnóstico**: En sistemas multi-componente, añade logs en cada frontera de componente para ver DÓNDE se rompe exactamente.
-5. **Rastreo de Flujo de Datos**: Sigue el rastro del valor incorrecto hacia atrás en el stack hasta encontrar el origen. Arregla en el origen, no en el síntoma.
+1. **Lectura Crítica de Errores**: No ignores ni resumas los errores. Lee los stack traces completos. Anota líneas, rutas y códigos de error.
+2. **Reproducción Consistente**: ¿Puedes activarlo de forma fiable? Define los pasos exactos. Si no es reproducible, necesitas más logs, no una hipótesis.
+3. **Diferencial de Cambios**: ¿Qué ha cambiado recientemente? (Git diff, dependencias, actualizaciones de config).
+4. **Instrumentación de Diagnóstico**:
+   - En sistemas multicomponente, añade logs en cada frontera.
+   - Rastrea el flujo de datos hacia atrás (backward tracing) desde el síntoma hasta el origen.
+   - **Arregla en el origen, no en el síntoma.**
 
-## Fase 2: Análisis Forense de Logs y Correlación
+### Fase 2: Análisis de Patrones e Hipótesis
 
-1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
-2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
-3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
-4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+1. **Búsqueda de Ejemplos Funcionales**: Localiza código similar que sí funcione. Compara cada detalle, por pequeño que parezca.
+2. **Formulación Científica**: "Creo que el problema es X porque observo Y". Enuncia tu hipótesis antes de tocar el código.
+3. **Experimento Mínimo**: Haz el cambio más pequeño posible para validar la hipótesis. Una variable a la vez.
 
-## Fase 2: Análisis Forense de Logs y Correlación
+### Fase 3: Implementación y Validación
 
-1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
-2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
-3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
-4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+1. **Test de Fallo (TDD)**: Crea una prueba (o script mínimo) que falle debido al bug identificado.
+2. **Corrección de Raíz**: Aplica la solución basándote en la validación de la fase anterior.
+3. **Limpieza Forense**: Elimina todos los logs y código temporal de debugging.
 
-## Fase 2: Análisis Forense de Logs y Correlación
+## 📝 Registro y Persistencia (User-Triggered Closure)
 
-1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
-2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
-3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
-4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+No asumas el éxito hasta que el usuario confirme. Una vez validada la solución:
 
-## Fase 2: Análisis Forense de Logs y Correlación
+1. **Invocación de Memoria**: Usa **[gestor-memoria-proyecto](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/gestor-memoria-proyecto/SKILL.md)**.
+2. **Registro Dual Obligatorio**:
+   - **Local**: Registra el binomio Problema/Solución en `PROJECT_CONTEXT.md`.
+   - **Global**: Registra la lección aprendida en **[GLOBAL_LEARNINGS.md](file:///d:/Projects/AI/Skill%20Agents/GLOBAL_LEARNINGS.md)**.
+3. **Evolución**: Invoca a **[arquitecto-agents-skills](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/arquitecto-agents-skills/SKILL.md)** para ver si el bug revela una debilidad en otra skill o una oportunidad de automatización.
 
-1. **Patrones de Error (Regex)**: Define patrones de búsqueda para extraer errores específicos de logs masivos.
-2. **Línea de Tiempo**: Crea una cronología de eventos de error correlacionándolos con despliegues o cambios de configuración.
-3. **Correlación de Sistemas**: En entornos distribuidos, rastrea el ID de la solicitud a través de múltiples servicios para identificar fallos en cascada.
-4. **Detección de Anomalías**: Identifica picos en la tasa de errores o cambios repentinos en el comportamiento de los logs.
+## 🚩 Señales de Alerta (Red Flags)
 
-### 5. Persistencia del Conocimiento (User-Triggered Closure)
+Si te encuentras diciendo:
 
-Vaya sorpresa: el jefe manda. No asumas que has arreglado nada hasta que el usuario te lo confirme. Una vez que el usuario te haga saber que el problema ha sido solucionado:
+- "Voy a probar este cambio rápido a ver si funciona".
+- "Es parecido a un bug que vi, así que la solución debe ser la misma".
+- "Voy a aplicar 3 cambios a la vez para ahorrar tiempo".
 
-- Invoca la skill **[gestor-memoria-proyecto](file:///d:/Projects/AI/Skill%20Agents/skills/gestor-memoria-proyecto/SKILL.md)**.
-- **Registro Dual Obligatorio**: Debes registrar el binomio (Problema/Solución) en dos niveles:
-  1. **Local**: En el `PROJECT_CONTEXT.md` del proyecto actual.
-  2. **Global**: En **[GLOBAL_LEARNINGS.md](file:///d:/Projects/AI/Skill%20Agents/.agent/GLOBAL_LEARNINGS.md)**.
-- **Validación del Usuario**: El registro debe mencionar explícitamente que la solución fue validada por el usuario. No te lleves el crédito tú solo, aunque todos sepamos quién hizo el trabajo pesado.
-- Este par (Problema/Solución) es la base de nuestra sabiduría acumulada. Nunca registres solo la solución sin el contexto del error inicial.
-
-## Directrices para el Agente
-
-- **Mantén la Calma**: Ante un error recurrente, detente y vuelve al paso 1 (Observación).
-- **Documenta el Proceso**: Explica al usuario qué estás probando y por qué. "Estoy probando X porque vi el error Y en los logs".
-- **Limpieza**: Asegúrate de eliminar cualquier código de debugging temporal (`console.log`, `print`, etc.) una vez resuelto el problema.
-- **Post-Solution Evolution**: Una vez documentada la solución, invoca a **[arquitecto-agents-skills](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/arquitecto-agents-skills/SKILL.md)** para ver si esta solución abre una oportunidad de mejorar alguna skill técnica o de automatizar una prevención futura.
-
-## Casos de Uso
-
-- Errores de "Command not found".
-- Comportamientos inesperados en la UI o lógica de negocio.
-- Fallos en el build o despliegue del proyecto.
+**DETENTE.** Vuelve a la Fase 1. Estás adivinando, no investigando.

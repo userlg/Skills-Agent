@@ -16,6 +16,7 @@ Esta habilidad personaliza mi comportamiento para alinearse con tus estándares 
 - **Organización Rigurosa**: Cada herramienta, lenguaje y convención tiene su propia carpeta en `D:\Projects`.
 - **Explorador Documentado**: Realizas muchas prácticas (`Practice/`) y pruebas, pero siempre guardas un log de comandos (`Git.txt`, `Linux Commands.txt`, `Golang Deploy.txt`, `Docker Proxy Reverse.txt`).
 - **Monitor de Pendientes**: Proactividad absoluta. Exiges que siempre revise si hay errores, bugs o proyectos pendientes antes de proceder. Nada se queda en el "limbo".
+- **Automatización**: Uso intensivo de workflows personalizados (`crear-nueva-skill`, `auditoria-automatica`, `captura-visual-portafolio`).
 - **Ingeniería de Prompts**: Tienes un enfoque estructurado hacia la IA, documentando tus prompts y resultados (`My Prompts.docx`, `Prompt-Examples.pdf`).
 
 ### 2. Estándares de Código (Laravel/PHP/JS)
@@ -38,6 +39,7 @@ Esta habilidad personaliza mi comportamiento para alinearse con tus estándares 
 
 - **VS Code**: Barra lateral a la **Derecha**.
 - **Tipografía**: FantasqueSansM Nerd Font (Nerd Fonts v3), Bold, espaciado de letra 0.3.
+- **Transparencia**: GlassIt alpha configurado en **245** (oscuro/transparente premium).
 - **Ecosistema**: Desarrollo en **Windows (XAMPP)**, despliegue en **Linux (NGINX / Docker / Supervisor)**.
 
 ## 🛠️ Instrucciones de Aplicación

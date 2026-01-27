@@ -29,10 +29,10 @@ Evalúa la nueva información:
 
 Revisa las habilidades actuales buscando:
 
-- **Redundancia**: ¿Dos skills hacen lo mismo? Consolida.
+- **Redundancia**: ¿Dos skills hacen lo mismo? Consolida (ej. Detective Debugging + Systematic Debugging).
 - **Obsolescencia**: ¿Hay una forma más eficiente de hacer esto (ej. Laravel 11 vs 10)? Actualiza.
+- **Limpieza y Puliendo**: Pule el lenguaje, asegura el tono de Userlg y verifica que no haya duplicaciones internas.
 - **Claridad**: ¿Las instrucciones son ambiguas? Pule el lenguaje.
-- **Sinergia**: ¿Cómo puede la Skill A beneficiarse del conocimiento de la Skill B?
 - **Registro en Tiempo Real**: Es **obligatorio** registrar cada cambio en el `ACTIVITY_LOG.md`.
 - **Gestión de Sabiduría Global**: Asegura que las lecciones aprendidas fluyan hacia el `GLOBAL_LEARNINGS.md`.
 - **Monitor de Pendientes**: Supervisa que el agente nunca ignore una tarea marcada como pendiente. Si detectas "ruido" o falta de enfoque, fuerza una pregunta al usuario sobre el estado de los pendientes.
