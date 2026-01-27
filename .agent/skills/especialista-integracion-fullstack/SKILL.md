@@ -37,6 +37,7 @@ El estado del servidor (data de API) NO es igual al estado de UI (modales abiert
 
 - **Recomendación**: Usa librerías como **TanStack Query (React Query)** o **SWR**.
 - **Beneficios**: Caching, Re-intentos automáticos, deduplicación de requests.
+- **Real-Time Integration**: Para aplicaciones web modernas, prefiere **Inertia.js v2** (unión fluida back/front) y **Laravel Reverb** para comunicación bi-direccional eficiente.
 
 ### 4. Manejo de Errores Consistente
 

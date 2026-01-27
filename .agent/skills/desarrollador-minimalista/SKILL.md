@@ -40,6 +40,7 @@ Siempre ofrece primero la solución nativa.
 - Usa `fetch` en lugar de `axios` (a menos que necesites interceptores complejos).
 - Usa `datetime` en lugar de `moment.js` o `date-fns` (si es solo para formateo simple).
 - Usa CSS Vanilla en lugar de Tailwind/Bootstrap (si el proyecto es pequeño).
+- **Streamlining Frameworks**: En Laravel 11+, evita recrear archivos de configuración (`php artisan config:publish`) si no es estrictamente necesario; usa el `bootstrap/app.php` para configuraciones globales.
 
 ## Formato de Salida
 

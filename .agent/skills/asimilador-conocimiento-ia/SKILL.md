@@ -12,7 +12,8 @@ Esta habilidad te permite "subir de nivel" analizando fuentes de información de
 ### 1. Ingesta (Ingestion)
 
 - **Fuentes Externas**: Usa `read_url_content` para leer documentación, artículos o blogs.
-- **Fuentes Locales**: Usa `list_dir` y `view_file` para analizar un proyecto o librería existente.
+- **Fuentes Locales**: Usa `list_dir` y `view_file` para analizar un proyecto.
+- **Protocolos de Contexto**: Identifica y utiliza servidores **MCP** (Model Context Protocol) o recursos de **Laravel Boost** (`.ai/guidelines`) para obtener conocimiento profundo y específico de la aplicación.
 
 ### 2. Destilación (Distillation)
 
@@ -47,4 +48,4 @@ Sigue el protocolo de `aprender-nuevas-habilidades` para escribir o modificar lo
 
 - Cuando el usuario te pase un link a una documentación nueva.
 - Al interactuar con un repositorio que usa tecnologías que desconoces.
-- Cuando quieras optimizar tu propio flujo de trabajo basado en nuevas tendencias.
+- Cuando quieras optimizar tu propio flujo de trabajo basado en nuevas tendencias (ej. **Laravel MCP** o **Inertia.js v2**).
