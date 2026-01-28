@@ -19,10 +19,10 @@ Esta habilidad te permite "subir de nivel" analizando fuentes de información de
 
 Analiza el contenido buscando:
 
-- **Patrones de Diseño**: ¿Cómo resuelven los problemas en esta fuente?
+- **Patrones de Diseño**: ¿Cómo resuelven los problemas en esta fuente? (Ej: Downmixing multicanal ponderado, Filtros Integrales + Fall-off para señales continuas).
 - **Nuevas Herramientas**: ¿Qué librerías o comandos usan que yo no conocía?
 - **Mejores Prácticas**: ¿Qué estándares de seguridad o performance mencionan?
-- **Manejo de Errores**: ¿Cómo lidian con los fallos?
+- **Manejo de Errores**: ¿Cómo lidian con los fallos? (Ej: Detección forense de dispositivos WASAPI en Windows).
 
 ### 3. Síntesis y Optimización Transversal (Synthesis)
 

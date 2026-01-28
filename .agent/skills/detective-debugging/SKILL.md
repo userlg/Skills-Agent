@@ -26,7 +26,8 @@ Si no has completado la Fase 1, no puedes proponer arreglos. El parche rápido e
    - **Arregla en el origen, no en el síntoma.**
 5. **Aislamiento de Rutas Hardware**:
    - En sistemas con múltiples drivers (ej. NVIDIA HDMI y Realtek Onboard), verifica si el destino físico coincide con el origen de captura.
-   - **Limitación**: El software (Stereo Mix) a menudo no puede "puentear" señales entre dispositivos de hardware distintos.
+   - **Loopback Validation**: En Windows (WASAPI), confirma si el dispositivo de captura es un "Loopback Analogue". El software (Stereo Mix) a menudo no puede "puentear" señales entre dispositivos de hardware distintos fuera de WASAPI.
+   - **Limitación**: El software estándar a menudo falla al capturar audio de dispositivos Bluetooth o HDMI sin el parche WASAPI adecuado.
    - **Prueba**: Cambia la salida física para confirmar si el problema persiste.
 
 ### Fase 2: Análisis de Patrones e Hipótesis
@@ -40,6 +41,11 @@ Si no has completado la Fase 1, no puedes proponer arreglos. El parche rápido e
 1. **Test de Fallo (TDD)**: Crea una prueba (o script mínimo) que falle debido al bug identificado.
 2. **Corrección de Raíz**: Aplica la solución basándote en la validación de la fase anterior.
 3. **Limpieza Forense**: Elimina todos los logs y código temporal de debugging.
+
+## 🚩 Señales de Alerta (Red Flags)
+
+- **AUDCLNT_E_DEVICE_INVALIDATED**: Error crítico en WASAPI. Indica que el dispositivo dejó de estar disponible o cambió el formato. Requiere reinicializar todo el subsistema de audio.
+- **Formato No Soportado**: WASAPI es extremadamente rígido con `sample_rate` y `channels`. Siempre usa los valores predeterminados (`defaultSampleRate`) obtenidos del diccionario del dispositivo.
 
 ## 📝 Registro y Persistencia (User-Triggered Closure)
 

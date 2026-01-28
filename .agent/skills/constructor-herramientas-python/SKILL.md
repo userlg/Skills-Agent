@@ -59,6 +59,8 @@ Con la llegada de NumPy 2.0, el manejo de tipos de datos y el rendimiento en buc
 - **Vectorized Masking**: Evita `np.maximum(0, x)` o bucles `for` en arreglos grandes. Usa máscaras Booleanas para procesar solo los elementos necesarios (ej. un Noise Gate).
 - **Precision**: NumPy 2.0 es más riguroso con la promoción de tipos. Usa `dtype` explícitos en buffers críticos.
 - **Performance Leak**: En callbacks de audio/video, evita re-asignar buffers enteros. Usa `.fill(0)` y asignaciones por máscara `buffer[mask] = ...`.
+- **Hardware Isolation & Loopback**: En Windows, prioriza **WASAPI** sobre MME/DirectSound. Para capturar el sonido del sistema (speakers), usa la librería **`PyAudioWPatch`** en lugar del `pyaudio` estándar. Implementa **downmixing ponderado** (0.7 para canales satélite) en lugar de promedio simple para preservar la presencia sonora.
+- **Context Managers**: Siempre encapsula la apertura de interfaces de audio (`PyAudio`) y streams en bloques `with` para asegurar la liberación de recursos en caso de error.
 
 ## Guía de Estilo
 
