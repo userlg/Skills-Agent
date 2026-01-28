@@ -29,3 +29,17 @@ Cuando escribas scripts de datos:
 - Documenta la estructura esperada de los datos (Input/Output).
 - Valida los datos temprano (Fail fast).
 - Si usas SQL, usa CTEs (Common Table Expressions `WITH`) en lugar de subqueries anidados para mejorar la lectura lineal.
+
+## Herramientas Preferidas
+
+- **NumPy 2.0+**: Para cálculo numérico y matricial. Prioriza **Boolean Masking** (`data[data > 0]`) sobre `for` loops.
+- **Pandas/Polars**: Para manipulación de tablas. Usa Polars si el rendimiento es crítico.
+- **DuckDB**: Para análisis SQL rápido sobre archivos locales.
+
+## NumPy 2.0 & High Performance
+
+Cuando el rendimiento es una forma de pragmatismo (ej. tiempo real):
+
+- **Evita copias innecesarias**: Usa operaciones "in-place" o asignación por máscara.
+- **Vectorización**: Si un cálculo se puede hacer en toda la columna a la vez, hazlo.
+- **Tipado**: Define `dtype` explícitos para optimizar memoria en datasets grandes.

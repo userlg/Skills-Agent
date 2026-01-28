@@ -60,6 +60,27 @@ Al detectar que una tarea quedó a medias o hay estados pendientes:
 2.  **Memoria Semántica (Global)**: Extrae patrones reutilizables. Si solucionas un problema de Nginx que es común, regístralo en `GLOBAL_LEARNINGS.md`.
 3.  **Memoria por Perfil**: Si el usuario Userlg cambia una preferencia (ej. prefiere Vitest sobre Pest), actualiza `perfil-usuario-userlg` de inmediato.
 
+## Base de Conocimiento Técnico (Aprendido en Batalla)
+
+Esta sección contiene soluciones probadas para problemas complejos recurrentes. Úsala como referencia antes de intentar reinventar la rueda.
+
+### Audio Visualization & Processing (Python/EchoPy)
+
+1.  **Captura de Audio en Windows**:
+    - **Mejor Opción**: `sounddevice` con WASAPI loopback.
+    - **Dispositivo Clave**: "Stereo Mix" (Mezcla Estéreo). Debe priorizarse sobre todo lo demás.
+    - **Problema de Señal Débil**: El loopback interno puede tener una amplitud diminuta (RMS ~0.00005) incluso si el volumen se escucha bien.
+    - **Solución (AGC)**: Implementar **Automatic Gain Control (AGC)**. Normalizar la señal (`target / peak`) antes de procesarla. No confiar en la ganancia estática.
+
+2.  **Animaciones Reactivas**:
+    - **Logarithmic Scaling**: Para visualización musical, el mapeo de frecuencias debe ser logarítmico (`np.logspace`).
+    - **Bass Isolation**: Empezar el muestreo logarítmico desde el índice 2 o 3 (aprox 40-60Hz) para saltar el "DC Offset" (0Hz) que suele ser ruido estático.
+    - **Silence Gating**: Si usas AGC, el ruido de fondo se amplificará al máximo en silencio. Implementar un "Noise Gate" post-normalización (ej. `if rms < 0.05: zero_out()`).
+
+3.  **Entorno Windows/Python**:
+    - **NumPy Crash**: Un error recurrente `AttributeError: has no attribute 'zeros'` indica corrupción en el entorno. Solución: Usar `np.array([0]*N)` o evitar reiniciar el kernel innecesariamente.
+    - **Qt Threading**: Las actualizaciones de UI deben ser ligeras. El procesamiento de audio pesado debe ir en un hilo/proceso separado (`QThread` o `multiprocessing`).
+
 ## Formato de `PROJECT_CONTEXT.md` (Ejemplo)
 
 ```markdown

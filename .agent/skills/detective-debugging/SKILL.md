@@ -24,6 +24,10 @@ Si no has completado la Fase 1, no puedes proponer arreglos. El parche rápido e
    - En sistemas multicomponente, añade logs en cada frontera.
    - Rastrea el flujo de datos hacia atrás (backward tracing) desde el síntoma hasta el origen.
    - **Arregla en el origen, no en el síntoma.**
+5. **Aislamiento de Rutas Hardware**:
+   - En sistemas con múltiples drivers (ej. NVIDIA HDMI y Realtek Onboard), verifica si el destino físico coincide con el origen de captura.
+   - **Limitación**: El software (Stereo Mix) a menudo no puede "puentear" señales entre dispositivos de hardware distintos.
+   - **Prueba**: Cambia la salida física para confirmar si el problema persiste.
 
 ### Fase 2: Análisis de Patrones e Hipótesis
 
