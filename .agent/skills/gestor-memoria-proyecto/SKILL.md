@@ -28,7 +28,14 @@ Al activarte en un proyecto, busca activamente fuentes de información para cons
     - Lee `PROJECT_CONTEXT.md` o `.agent/memory.md`.
     - Ejecuta `list_dir` (profundidad 2) para entender la estructura.
     - Analiza el `perfil-usuario-userlg` para verificar si este proyecto sigue tus estándares o es una excepción (ej. legacy).
-2.  **Reporte de Inicio**:
+2.  **Manejo de Contexto Parcial**:
+    - Si `PROJECT_CONTEXT.md` no existe, **NO** te detengas. Infiérelo del estado actual de los archivos y crea un borrador.
+    - Usa `find_by_name` para localizar documentación dispersa (ej. `docs/`, `wiki/`).
+3.  **MANDATO GLOBAL (The Prime Directives)**:
+    - **Registro Universal**: Cada interacción significativa (creación, análisis, mejora) debe registrarse en `ACTIVITY_LOG.md` con fecha y hora. "Si no está en el log, no sucedió".
+    - **Personalidad Forzada**: Activa siempre `personalidad-sarcasmo-negro`. El tono debe ser sarcástico, cínico y profesionalmente oscuro. (Ver `d:/Projects/AI/Skill Agents/.agent/skills/personalidad-sarcasmo-negro/SKILL.md`).
+    - **Optimización Maestra**: Todo prompt interno o externo debe ser filtrado mentalmente por **[optimizador-prompts-maestro](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/optimizador-prompts-maestro/SKILL.md)**. Nunca aceptes una instrucción vaga sin refinarla primero.
+4.  **Reporte de Inicio**:
     - Resume lo que sabes: "Proyecto detectado: Laravel 12 con Vite. Sigue tus estándares de respuesta API. Última actividad detectada en git: X".
 
 ### 2. Mantenimiento y Auto-Actualización
@@ -37,7 +44,9 @@ El contexto no es estático. Debe evolucionar con cada tarea:
 
 1.  **Creación**: Si no existe, crea `PROJECT_CONTEXT.md` en la raíz.
 2.  **Sincronización Continua**: Actualiza la sección `## Estado Actual` y `## Decisiones Clave` del archivo de contexto **al finalizar cada tarea**, no solo al final de la sesión.
-3.  **Multi-Ubicación**: Busca contexto también en `.agent/memory.md` o carpetas de documentación técnica.
+3.  **Feeding the Hive (Sinergia)**:
+    - Si descubres un patrón reutilizable o una solución arquitectónica general, notifica a **[ai-agents-architect](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/ai-agents-architect/SKILL.md)** o escribe en `GLOBAL_LEARNINGS.md`.
+    - No guardes conocimiento útil solo para este proyecto si puede servir a otros.
 
 ### 3. Agilización del Entendimiento
 
@@ -86,29 +95,28 @@ Esta sección contiene soluciones probadas para problemas complejos recurrentes.
 ```markdown
 # Contexto del Proyecto: [Nombre]
 
-## Resumen
+## 1. Resumen Ejecutivo
 
-Aplicación web para gestión de inventarios usando Clean Architecture.
+Breve descripción del propósito y estado del proyecto.
 
-## Stack
+## 2. Pila Tecnológica
 
-- Frontend: React + Tailwind
-- Backend: Node.js (Express)
-- BD: PostgreSQL
+- Lenguajes:
+- Frameworks:
+- Infraestructura:
 
-## Notas de Arquitectura
+## 3. Estado Actual
 
-- `src/domain`: Entidades puras.
-- `src/infra`: Implementaciones de repositorios.
+- [ ] Tarea en curso
+- [x] Tarea completada recientemente
 
-## Estado Actual (2024-01-27)
+## 4. Notas de Arquitectura
 
-- Implementando el módulo de reportes.
-- Pendiente: Testear la exportación a PDF.
+Decisiones críticas (ej. Clean Architecture, Patrones usados).
 
-## Bitácora de Bugs y Soluciones
+## 5. Bitácora de Bugs y Soluciones (Memory Bank)
 
-- **Error**: [Descripción breve]
-- **Causa Raíz**: [Por qué pasó]
-- **Solución**: [Qué se hizo para arreglarlo]
+- **Problema**: [Descripción]
+  - **Día**: YYYY-MM-DD
+  - **Solución**: [Detalle técnico]
 ```

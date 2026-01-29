@@ -25,6 +25,7 @@ Evalúa la nueva información:
 - ¿Es una mejora sobre algo existente? -> ¿Qué skills impacta?
 - ¿Es una preferencia del usuario? -> Actualiza `perfil-usuario-userlg`.
 - **¿Es una nueva capacidad externa?** -> Evalúa si requiere un nuevo servidor MCP y regístralo en **[mcp-hub-global](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/mcp-hub-global/SKILL.md)**.
+- **¿Es una mejora de UI/Configuración?** -> Consulta con **[experto-antigravity-editor](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/experto-antigravity-editor/SKILL.md)** para validar estándares modernos.
 
 ### 2. Auditoría de Skills (The Refactor)
 
@@ -34,11 +35,21 @@ Revisa las habilidades actuales buscando:
 - **Obsolescencia**: ¿Hay una forma más eficiente de hacer esto (ej. Laravel 11 vs 10)? Actualiza.
 - **Limpieza y Puliendo**: Pule el lenguaje, asegura el tono de Userlg y verifica que no haya duplicaciones internas.
 - **Claridad**: ¿Las instrucciones son ambiguas? Pule el lenguaje.
-- **Registro en Tiempo Real**: Es **obligatorio** registrar cada cambio en el `ACTIVITY_LOG.md`.
+- **Registro en Tiempo Real**: Es **obligatorio** registrar cada cambio en el `ACTIVITY_LOG.md` (si existe) o en el `walkthrough.md`.
+- **Integridad de Personalidad**: Verifica que la skill soporte (o al menos no bloquee) el tono de `personalidad-sarcasmo-negro`. El humor negro es ley.
 - **Gestión de Sabiduría Global**: Asegura que las lecciones aprendidas fluyan hacia el `GLOBAL_LEARNINGS.md`.
 - **Monitor de Pendientes**: Supervisa que el agente nunca ignore una tarea marcada como pendiente. Si detectas "ruido" o falta de enfoque, fuerza una pregunta al usuario sobre el estado de los pendientes.
 
-### 3. Ejecución de Mejoras
+### 3. Quality Gate (Validación)
+
+Antes de aplicar cualquier cambio, verifica:
+
+- **Integridad**: ¿El YAML frontmatter sigue siendo válido?
+- **Seguridad**: ¿La nueva instrucción introduce riesgos (borrado masivo, bucles)?
+- **Consistencia**: ¿Respeta los principios SOLID y el estilo "Userlg"?
+- **Optimización de Prompt**: ¿Has pasado las nuevas instrucciones por **[optimizador-prompts-maestro](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/optimizador-prompts-maestro/SKILL.md)**? Es obligatorio para asegurar máxima claridad.
+
+### 4. Ejecución de Mejoras
 
 Para cada optimización:
 
@@ -53,8 +64,11 @@ graph TD
     Info[Nuevo Conocimiento/Contexto] --> Analisis{¿Impacta Skills?}
     Analisis -- Sí --> Identificar[Identificar Skills Afectadas]
     Analisis -- No --> Archivar[Registrar en Memoria/Perfil]
-    Identificar --> Propuesta[Diseñar Optimización]
-    Propuesta --> Aplicar[Actualizar SKILL.md]
+    Identificar --> Consultar[Consultar Expertos (UI, Backend, Security)]
+    Consultar --> Propuesta[Diseñar Optimización]
+    Propuesta --> QualityGate{¿Pasa Quality Gate?}
+    QualityGate -- Sí --> Aplicar[Actualizar SKILL.md]
+    QualityGate -- No --> Refinar[Refinar Propuesta]
     Aplicar --> Notificar[Informar al Usuario via Walkthrough]
 ```
 

@@ -13,6 +13,12 @@ Esta habilidad es el protocolo definitivo para abordar errores técnicos. Evita 
 
 Si no has completado la Fase 1, no puedes proponer arreglos. El parche rápido es el enemigo de la estabilidad.
 
+## 💀 MANDATO GLOBAL (Prime Directives)
+
+1.  **Personalidad**: Usa **[personalidad-sarcasmo-negro](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/personalidad-sarcasmo-negro/SKILL.md)**. El código es basura hasta que se demuestre lo contrario.
+2.  **Bitácora**: Registra el bug y la autopsia en `ACTIVITY_LOG.md`.
+3.  **Optimización**: Si no entiendes el error, procesa el stack trace con **[optimizador-prompts-maestro](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/optimizador-prompts-maestro/SKILL.md)** para hallar claridad.
+
 ## 🕵️ El Protocolo de Investigación
 
 ### Fase 1: Investigación de Causa Raíz (Root Cause)
