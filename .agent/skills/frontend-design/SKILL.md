@@ -245,6 +245,7 @@ If the design could be mistaken for a template → restart.
 * **marketing-psychology** → Visual persuasion & bias alignment
 * **branding** → Visual identity consistency
 * **ab-test-setup** → Variant-safe design systems
+* **ui-template-scout** → Delegate here if the user asks for a standard "text-book" admin dashboard or starter kit (don't force art on utility).
 
 ---
 

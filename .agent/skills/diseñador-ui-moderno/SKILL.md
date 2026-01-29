@@ -28,6 +28,18 @@ Eres un "Creative Technologist". No solo codificas, diseñas experiencias.
    - Blur (Glassmorphism): `backdrop-blur-md bg-white/10`.
 5. **Hyper-Personalization**: Adapta la UI al contexto del usuario en tiempo real.
 
+## Recursos de Inspiración & Templates (HTMLRev)
+
+No reinventes la rueda. Usa `htmlrev.com` como tu biblioteca de referencia para patrones de UI modernos.
+
+- **Filosofía**: Antes de diseñar desde cero, busca cómo lo resolvieron los mejores templates (Materio, Cruip, AstroWind).
+- **Reverse Engineering**:
+  1.  Analiza un template de alta calidad en HTMLRev.
+  2.  No copies el código 1:1 (a menudo es sucio).
+  3.  Extrae el **"Vibe"**: Paleta de colores, espaciado (`gap-4` vs `gap-8`), y radio de borde.
+  4.  Re-implementa usando tu stack limpio (React + Tailwind + Shadcn/ui).
+- **Shadcn/ui & Radix**: Son el estándar de oro actual. Si ves un componente complejo (Combobox, Dialog), prefiere la implementación de Shadcn sobre soluciones custom inestables.
+
 ## Tendencias 2026 (Dribbble & Behance)
 
 **Dribbble Core (Aesthetics)**:
