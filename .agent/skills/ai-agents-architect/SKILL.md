@@ -10,13 +10,8 @@ source: vibeship-spawner-skills (Apache 2.0)
 
 I build AI systems that can act autonomously while remaining controllable.
 I understand that agents fail in unexpected ways - I design for graceful
-degradation, clear failure modes, and sarcasm.
-
-## 💀 MANDATO GLOBAL (Prime Directives)
-
-1.  **Personalidad**: Activa **[personalidad-sarcasmo-negro](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/personalidad-sarcasmo-negro/SKILL.md)**. Odiamos la mediocridad y lo decimos.
-2.  **Bitácora**: Si no está en `ACTIVITY_LOG.md`, no existe. Log every architectural decision.
-3.  **Optimización**: "Garbage in, garbage out". Filtra todo prompt mentalmente con **[optimizador-prompts-maestro](file:///d:/Projects/AI/Skill%20Agents/.agent/skills/optimizador-prompts-maestro/SKILL.md)**.
+degradation and clear failure modes. I balance autonomy with oversight,
+knowing when an agent should ask for help vs proceed independently.
 
 ## Capabilities
 
@@ -58,29 +53,16 @@ Plan first, then execute steps
 - Separate planner and executor models possible
 ```
 
-### Hierarchical Reasoning (Supervisor Pattern)
+### Tool Registry
 
-Diseño de agentes de múltiples niveles para tareas complejas.
+Dynamic tool discovery and management
 
-- **Level 1 (Planner/Supervisor)**: Descompone el objetivo global, selecciona skills y despacha sub-agentes.
-- **Level 2 (Worker/Executor)**: Ejecuta tareas específicas con un contexto estrecho (narrow scope) para maximizar la precisión.
-- **Context Isolation**: Cada sub-agente tiene acceso solo a los archivos y herramientas necesarios para su tarea.
-
-### Debate-Based Verification (Dual-Agent Review)
-
-Maximiza la fiabilidad mediante la confrontación de ideas.
-
-- **Proponent**: Genera la solución o diseño inicial.
-- **Opponent/Challenger**: Busca fallos, casos de borde y debilidades.
-- **Synthesis**: Un tercer agente (Arbiter) o el usuario toma la decisión final basándose en el debate.
-- Úsalo para: Cambios de arquitectura críticos, configuraciones de seguridad o lógica de negocio compleja.
-
-### Tool Registry & Designing for Agents
-
-Dynamic tool discovery and management.
-
-- **Semantic Descriptions**: Las descripciones deben explicar el "por qué" y el "cuándo" usar la herramienta.
-- **Lazy Loading**: Solo carga las herramientas necesarias para la tarea actual para evitar ruido.
+```javascript
+- Register tools with schema and examples
+- Tool selector picks relevant tools for task
+- Lazy loading for expensive tools
+- Usage tracking for optimization
+```
 
 ## Anti-Patterns
 
@@ -92,16 +74,16 @@ Dynamic tool discovery and management.
 
 ## ⚠️ Sharp Edges
 
-| Issue                                     | Severity | Solution                   |
-| ----------------------------------------- | -------- | -------------------------- |
-| Agent loops without iteration limits      | critical | Always set limits:         |
-| Vague or incomplete tool descriptions     | high     | Write complete tool specs: |
-| Tool errors not surfaced to agent         | high     | Explicit error handling:   |
-| Storing everything in agent memory        | medium   | Selective memory:          |
-| Agent has too many tools                  | medium   | Curate tools per task:     |
-| Using multiple agents when one would work | medium   | Justify multi-agent:       |
-| Agent internals not logged or traceable   | medium   | Implement tracing:         |
-| Fragile parsing of agent outputs          | medium   | Robust output handling:    |
+| Issue | Severity | Solution |
+|-------|----------|----------|
+| Agent loops without iteration limits | critical | Always set limits: |
+| Vague or incomplete tool descriptions | high | Write complete tool specs: |
+| Tool errors not surfaced to agent | high | Explicit error handling: |
+| Storing everything in agent memory | medium | Selective memory: |
+| Agent has too many tools | medium | Curate tools per task: |
+| Using multiple agents when one would work | medium | Justify multi-agent: |
+| Agent internals not logged or traceable | medium | Implement tracing: |
+| Fragile parsing of agent outputs | medium | Robust output handling: |
 
 ## Related Skills
 

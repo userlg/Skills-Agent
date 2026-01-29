@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "esbenp.prettier-vscode",
+    "yzhang.markdown-all-in-one",
+    "tamasfe.even-better-toml",
+    "bierner.markdown-mermaid",
+    "mechatroner.rainbow-csv"
+  ]
+}
