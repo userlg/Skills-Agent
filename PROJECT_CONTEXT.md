@@ -1,35 +1,73 @@
 # Contexto del Proyecto: Skill Agents
 
-Sistema de agentes de IA diseñado para la auto-evolución, gestión de conocimiento y automatización de tareas de desarrollo. Basado en el ecosistema personal de Userlg.
+Sistema masivo de agentes de IA diseñado para la auto-evolución, gestión de conocimiento y automatización de tareas de desarrollo. Basado en el ecosistema personal de Userlg.
 
 > [!IMPORTANT]
-> **Regla de Oro: Monitor de Pendientes**
-> Antes de cada sesión o al concluir una fase, el agente DEBE revisar este archivo, `AUDIT_LOG.md` y `task.md` para identificar tareas no resueltas.
+> **Regla de Oro**: Antes de cada sesión o al concluir una fase, el agente DEBE revisar este archivo para mantener contexto actualizado.
 
-## Stack
+## Stack Tecnológico
 
-- **Core**: Antigravity AI Agent Engine.
-- **Memoria**: Markdown files (`.agent/`, `ACTIVITY_LOG.md`, `GLOBAL_LEARNINGS.md`).
-- **Skills**: YAML-powered markdown definitions.
-- **Monitor de Pendientes**: Exiges que siempre revise si hay errores, bugs o proyectos pendientes antes de empezar o al cerrar una tarea. No quieres que nada quede en el olvido.
-- **Ingeniería de Prompts**: Tienes un enfoque estructurado hacia la IA, documentando tus prompts y resultados (`My Prompts.docx`, `Prompt-Examples.pdf`).
-- **Utilerías**: Node.js / Puppeteer (para capturas visuales).
+- **Core**: Antigravity AI Agent Engine
+- **Skills**: 620+ habilidades YAML-powered en `.agent/skills/`
+- **Memoria**: Markdown files + Knowledge Items system
+- **Utilerías**: Node.js, PowerShell, Python scripts
 
-## Notas de Arquitectura
+## Arquitectura del Proyecto
 
-- **Estructura de Skills**: Ubicadas en `.agent/skills/{nombre-skill}/SKILL.md`. Cada una tiene un rol y persona definidos.
-- **Memoria Global**: `GLOBAL_LEARNINGS.md` actúa como el repositorio de sabiduría trans-proyecto.
-- **Personalidad**: Implementada vía `personalidad-sarcasmo-negro`, con enfoque pragmático y cínico.
+### Estructura de Skills
+```
+.agent/skills/
+├── Document Skills (docx, pdf, pptx, xlsx) - Official Anthropic
+├── Dev Tools (mcp-builder, webapp-testing, web-artifacts)
+├── Learning Systems (continuous-learning-v2, eval-harness, verification-loop)
+├── Creative (canvas-design, algorithmic-art)
+├── 600+ community and custom skills
+```
 
-## Estado Actual (2026-01-27)
+### Componentes Principales
+- **analizador-repos-skills**: Analiza y fusiona repositorios externos
+- **ui-ux-pro-max v2.0**: Design system generator con 67 estilos
+- **Skills oficiales Anthropic**: docx, pdf, pptx, xlsx manipulation
+- **Learning systems**: Instinct-based continuous learning
 
-- [x] Inicialización del sistema de skills.
-- [x] Definición del perfil Userlg.
-- [/] Finalizando infraestructura (Workflows y Scripts).
-- [ ] Implementación de `capture-script.js`.
+## Estado Actual (2026-02-08)
 
-## Bitácora de Bugs y Soluciones
+### ✅ Completado
+- [x] Sistema de skills operativo con 613+ skills
+- [x] Integración de repositorios externos (everything-claude-code, anthropics/skills)
+- [x] Document manipulation skills (docx, pdf, pptx, xlsx)
+- [x] ui-ux-pro-max actualizado a v2.0
+- [x] unbound-dashboard skill añadida
+- [x] MCP builder y testing tools integrados
+- [x] Continuous learning v2 system
+- [x] Verification loops y eval harness
+- [x] Expansión basada en skills.sh (620+ skills totales)
+- [x] Soporte para Next.js 15 y React 19 patrones
 
-- **Error**: Command 'glassit.increase' not found.
-- **Causa Raíz**: El binario o registro de la extensión no estaba correctamente inicializado en el entorno de Antigravity.
-- **Solución**: Re-mapeo manual de atajos y verificación de la ruta de configuración en `settings.json`. Validado por el usuario.
+### 📊 Logros Recientes
+- **13 skills de alto valor integradas** de repositorios oficiales
+- **UI-UX Pro Max v2.0** con Design System Generator mejorado
+- **Document Skills** production-ready de Anthropic
+- **Learning & Verification** systems de everything-claude-code
+- **Skills de Vanguardia**: TanStack Query v5, Convex, Better Auth, Mastra, Agent Browser
+- **Next.js 15 Mastery**: Optimización para arquitectura Server-First y nuevos hooks
+
+### 🎯 Capacidades Clave
+- Creación/edición de documentos (Word, PDF, PowerPoint, Excel)
+- Generación de servidores MCP
+- Testing automático con Playwright
+- Aprendizaje continuo basado en instincts
+- Design systems profesionales
+- 600+ skills especializadas
+
+## Deployment
+
+Para desplegar el ecosistema de skills en otros proyectos:
+```powershell
+.\deploy-skills.ps1 -TargetPath "d:\Projects\MiNuevoProyecto"
+```
+
+## Notas
+- Personalidad implementada vía `personalidad-sarcasmo-negro`
+- Monitor de pendientes activo en cada sesión
+- Memoria global en `GLOBAL_LEARNINGS.md`

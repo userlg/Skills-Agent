@@ -1,203 +1,56 @@
 ---
 name: nextjs-best-practices
 description: Next.js App Router principles. Server Components, data fetching, routing patterns.
-allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 
-# Next.js Best Practices
+# Next.js Best Practices (v15+)
 
-> Principles for Next.js App Router development.
+You are a Next.js 15 expert. You leverage the latest features like `after()`, improved Server Actions, and advanced caching for production-grade applications.
 
----
+## 1. Server vs Client Components (Next.js 15)
 
-## 1. Server vs Client Components
+App Router is **Server-First**.
+- **Server Components**: Async by default. Best for fetching, SEO, and heavy logic.
+- **Client Components**: Mark with `'use client'`. For hooks, browser APIs, and interactivity.
 
-### Decision Tree
+### Composition Strategy
+Keep Client Components at the leaves. Pass Server Components as `children` to keep them static.
 
-```
-Does it need...?
-│
-├── useState, useEffect, event handlers
-│   └── Client Component ('use client')
-│
-├── Direct data fetching, no interactivity
-│   └── Server Component (default)
-│
-└── Both? 
-    └── Split: Server parent + Client child
-```
+## 2. Next.js 15 Specifics
 
-### By Default
+### The `after()` Hook
+Use `after()` to execute code after a response has been sent to the user (ideal for logging, analytics, or background processing).
+```typescript
+import { after } from 'next/server';
 
-| Type | Use |
-|------|-----|
-| **Server** | Data fetching, layout, static content |
-| **Client** | Forms, buttons, interactive UI |
-
----
-
-## 2. Data Fetching Patterns
-
-### Fetch Strategy
-
-| Pattern | Use |
-|---------|-----|
-| **Default** | Static (cached at build) |
-| **Revalidate** | ISR (time-based refresh) |
-| **No-store** | Dynamic (every request) |
-
-### Data Flow
-
-| Source | Pattern |
-|--------|---------|
-| Database | Server Component fetch |
-| API | fetch with caching |
-| User input | Client state + server action |
-
----
-
-## 3. Routing Principles
-
-### File Conventions
-
-| File | Purpose |
-|------|---------|
-| `page.tsx` | Route UI |
-| `layout.tsx` | Shared layout |
-| `loading.tsx` | Loading state |
-| `error.tsx` | Error boundary |
-| `not-found.tsx` | 404 page |
-
-### Route Organization
-
-| Pattern | Use |
-|---------|-----|
-| Route groups `(name)` | Organize without URL |
-| Parallel routes `@slot` | Multiple same-level pages |
-| Intercepting `(.)` | Modal overlays |
-
----
-
-## 4. API Routes
-
-### Route Handlers
-
-| Method | Use |
-|--------|-----|
-| GET | Read data |
-| POST | Create data |
-| PUT/PATCH | Update data |
-| DELETE | Remove data |
-
-### Best Practices
-
-- Validate input with Zod
-- Return proper status codes
-- Handle errors gracefully
-- Use Edge runtime when possible
-
----
-
-## 5. Performance Principles
-
-### Image Optimization
-
-- Use next/image component
-- Set priority for above-fold
-- Provide blur placeholder
-- Use responsive sizes
-
-### Bundle Optimization
-
-- Dynamic imports for heavy components
-- Route-based code splitting (automatic)
-- Analyze with bundle analyzer
-
----
-
-## 6. Metadata
-
-### Static vs Dynamic
-
-| Type | Use |
-|------|-----|
-| Static export | Fixed metadata |
-| generateMetadata | Dynamic per-route |
-
-### Essential Tags
-
-- title (50-60 chars)
-- description (150-160 chars)
-- Open Graph images
-- Canonical URL
-
----
-
-## 7. Caching Strategy
-
-### Cache Layers
-
-| Layer | Control |
-|-------|---------|
-| Request | fetch options |
-| Data | revalidate/tags |
-| Full route | route config |
-
-### Revalidation
-
-| Method | Use |
-|--------|-----|
-| Time-based | `revalidate: 60` |
-| On-demand | `revalidatePath/Tag` |
-| No cache | `no-store` |
-
----
-
-## 8. Server Actions
-
-### Use Cases
-
-- Form submissions
-- Data mutations
-- Revalidation triggers
-
-### Best Practices
-
-- Mark with 'use server'
-- Validate all inputs
-- Return typed responses
-- Handle errors
-
----
-
-## 9. Anti-Patterns
-
-| ❌ Don't | ✅ Do |
-|----------|-------|
-| 'use client' everywhere | Server by default |
-| Fetch in client components | Fetch in server |
-| Skip loading states | Use loading.tsx |
-| Ignore error boundaries | Use error.tsx |
-| Large client bundles | Dynamic imports |
-
----
-
-## 10. Project Structure
-
-```
-app/
-├── (marketing)/     # Route group
-│   └── page.tsx
-├── (dashboard)/
-│   ├── layout.tsx   # Dashboard layout
-│   └── page.tsx
-├── api/
-│   └── [resource]/
-│       └── route.ts
-└── components/
-    └── ui/
+export default function Page() {
+  after(() => {
+    // Run background task
+    logAnayltics();
+  });
+  return <div>My Content</div>;
+}
 ```
 
----
+### Static Fetching Changes
+In Next.js 15, `fetch` requests are no longer cached by default. Use `cache: 'force-cache'` explicitly if you want static-like behavior from previous versions.
 
-> **Remember:** Server Components are the default for a reason. Start there, add client only when needed.
+## 3. Data Fetching & Mutations
+
+### Server Actions
+- Use `'use server'` at the top of the file or function.
+- Always implement **Optimistic UI** using `useOptimistic`.
+- Validate with Zod.
+
+## 4. Performance & Core Web Vitals
+- Use `next/image` with `priority` for LCP.
+- Leverage `next/font` for zero CLS.
+- Use `loading.tsx` for instant feedback via streaming.
+
+## 5. Metadata & SEO
+- Use `generateMetadata` for dynamic titles/descriptions.
+- Implement OpenGraph and Twitter cards for social sharing.
+
+## Anti-Patterns
+- ❌ **Directly importing server modules in client code**: Use `server-only` to prevent this.
+- ❌ **Blocking the whole page on one fetch**: Use `<Suspense>` to unblock the UI.
