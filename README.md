@@ -1,72 +1,72 @@
-# 🌌 Antigravity Skill Agents: Arsenal Central
+# 🌌 Antigravity Skill Agents: Central Arsenal
 
-¡Bienvenido al **Arsenal Central** de habilidades (skills) para Antigravity AI! Este repositorio es un ecosistema masivo diseñado para la auto-evolución, gestión de conocimiento y automatización avanzada.
+Welcome to the **Central Arsenal** of skills for Antigravity AI! This repository is a massive ecosystem designed for self-evolution, knowledge management, and advanced automation.
 
 > [!IMPORTANT]
-> **Versión de Antigravity**: `1.107.0`
-> **Estado del Arsenal**: 620+ Skills operativas y optimizadas.
+> **Antigravity Version**: `1.107.0`
+> **Arsenal Status**: 620+ Skills operational and optimized.
 
-## 🚀 La Estrategia "Central Hub"
+## 🚀 The "Central Hub" Strategy
 
-Este repositorio (`d:\Projects\AI\Skill Agents`) funciona como el **Cerebro Maestro**.
-- **Mejora Continua**: Aquí es donde se refinan las skills y se crean nuevas.
-- **Distribución**: Para usar estas habilidades en otros proyectos, utiliza el protocolo de despliegue.
+This repository (`d:\Projects\AI\Skill Agents`) functions as the **Master Brain**.
+- **Continuous Improvement**: This is where skills are refined and new ones are created.
+- **Distribution**: To use these skills in other projects, use the deployment protocol.
 
-## 🛠️ Cómo Usar (Protocolo SOP)
+## 🛠️ How to Use (SOP Protocol)
 
-### 1. Infección (Despliegue)
-Para inyectar este arsenal en un nuevo proyecto:
+### 1. Infection (Deployment)
+To inject this arsenal into a new project:
 ```powershell
-.\deploy-skills.ps1 -TargetPath "C:\Ruta\A\Tu\Proyecto"
+.\deploy-skills.ps1 -TargetPath "C:\Path\To\Your\Project"
 ```
 
-### 2. Arranque (Bootstrapping)
-Una vez en el proyecto destino, pide al agente:
-> *"Inicializa el contexto del proyecto siguiendo tus protocolos."*
+### 2. Bootstrapping
+Once in the target project, ask the agent:
+> *"Initialize the project context following your protocols."*
 
-## 📚 Documentación Clave
+## 📚 Key Documentation
 
-- [**Contexto del Proyecto**](file:///d:/Projects/AI/Skill%20Agents/PROJECT_CONTEXT.md): Visión general y estado actual.
-- [**Libro de Auditoría**](file:///d:/Projects/AI/Skill%20Agents/AUDIT_LOG.md): Registro de soluciones, bugs y hitos técnicos.
-- [**Guía de Uso (SOP)**](file:///d:/Projects/AI/Skill%20Agents/HOW-TO-USE-SKILLS.md): Instrucciones detalladas de despliegue y mantenimiento.
-- [**Aprendizajes Globales**](file:///d:/Projects/AI/Skill%20Agents/GLOBAL_LEARNINGS.md): Base de conocimientos compartida.
+- [**Project Context**](file:///d:/Projects/AI/Skill%20Agents/PROJECT_CONTEXT.md): Overview and current status.
+- [**Audit Log**](file:///d:/Projects/AI/Skill%20Agents/AUDIT_LOG.md): Record of solutions, bugs, and technical milestones.
+- [**Usage Guide (SOP)**](file:///d:/Projects/AI/Skill%20Agents/HOW-TO-USE-SKILLS.md): Detailed instructions for deployment and maintenance.
+- [**Global Learnings**](file:///d:/Projects/AI/Skill%20Agents/GLOBAL_LEARNINGS.md): Shared knowledge base.
 
-## 🧩 El Ecosistema de Skills (620+)
+## 🧩 The Skills Ecosystem (620+)
 
-El arsenal está organizado en categorías modulares para cubrir cada aspecto del desarrollo moderno:
+The arsenal is organized into modular categories to cover every aspect of modern development:
 
-### 🔥 Novedades (Integration skills.sh)
-Recientemente añadidias y optimizadas para máxima precisión:
-- **TanStack Query v5**: Patrones de estado servidor y caché.
-- **Convex**: Guías para DB reactivas en tiempo real.
-- **Better Auth**: Gestión de identidad moderna.
-- **Vercel Composition Patterns**: Arquitectura "Server First".
-- **Baoyu Content Pro**: Automatización de X (Twitter) y WeChat.
-- **Mastra**: Framework para workflows de IA complejos.
+### 🔥 News (skills.sh Integration)
+Recently added and optimized for maximum precision:
+- **TanStack Query v5**: Server state patterns and caching.
+- **Convex**: Guides for real-time reactive DBs.
+- **Better Auth**: Modern identity management.
+- **Vercel Composition Patterns**: "Server First" architecture.
+- **Baoyu Content Pro**: X (Twitter) and WeChat automation.
+- **Mastra**: Framework for complex AI workflows.
 
-### 🏗️ Desarrollo Core
-- **Next.js 15 & React 19**: Patrones de vanguardia (Server Components, `after()`, dynamic APIs).
+### 🏗️ Core Development
+- **Next.js 15 & React 19**: Cutting-edge patterns (Server Components, `after()`, dynamic APIs).
 - **Backend Mastery**: Node.js, Python (FastAPI/Django), Go, Rust, C++.
 - **Database Expert**: Postgres (Supabase/Neon), NoSQL, ClickHouse.
 
-### 🤖 IA & Agentes
+### 🤖 AI & Agents
 - **Frameworks**: LangGraph, CrewAI, Mastra, LangChain.
 - **Agentic Tools**: MCP Builder, Agent Browser, Tool Builder.
 - **Memory Systems**: Vector Stores, Context Management, Instinct Learning.
 
-### 🛡️ Seguridad & QA
+### 🛡️ Security & QA
 - **Pentesting**: OWASP, Cloud Pentest, AD Attacks, Security Auditing.
 - **Testing**: Playwright, Vitest, TDD Orchestration, E2E Patterns.
 
-### 🎨 Diseño & UX
-- **Design Systems**: `ui-ux-pro-max v2.0` (67 estilos), Tailwind v4 patterns.
+### 🎨 Design & UX
+- **Design Systems**: `ui-ux-pro-max v2.0` (67 styles), Tailwind v4 patterns.
 - **Visuals**: Algorithmic Art, 3D Web Experience (Three.js), Scroll Storytelling.
 
-## 🧹 Mantenimiento & Auditoría
-- **Higiene de Prompts**: Estructurado por `optimizador-prompts-maestro`.
-- **Debug Evolutivo**: Utiliza `detective-debugging` para auto-corregir heurísticas.
-- **Refactorización Segura**: Aplicando estrictamente principios SOLID.
+## 🧹 Maintenance & Audit
+- **Prompt Hygiene**: Structured by `optimizador-prompts-maestro`.
+- **Evolutionary Debug**: Uses `detective-debugging` to self-correct heuristics.
+- **Safe Refactoring**: Strictly applying SOLID principles.
 
 ---
 
-> *"La inteligencia no se crea, se distribuye."*
+> *"Intelligence is not created, it is distributed."*
