@@ -1,11 +1,71 @@
 ---
 name: ui-ux-pro-max
-description: "UI/UX design intelligence. 50 styles, 21 palettes, 50 font pairings, 20 charts, 9 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, mobile app, .html, .tsx, .vue, .svelte. Elements: button, modal, navbar, sidebar, card, table, form, chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, flat design. Topics: color palette, accessibility, animation, layout, typography, font pairing, spacing, hover, shadow, gradient. Integrations: shadcn/ui MCP for component search and examples."
+description: "UI/UX design intelligence v2.0 with AI-powered Design System Generator. 67 styles, 96 color palettes, 57 font pairings, 25 chart types, 100 industry-specific reasoning rules, 13 tech stacks. Auto-generates complete design systems with pattern recommendations, color moods, typography, effects, and anti-patterns. Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, mobile app, .html, .tsx, .vue, .svelte. Elements: button, modal, navbar, sidebar, card, table, form, chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, flat design. Topics: color palette, accessibility, animation, layout, typography, font pairing, spacing, hover, shadow, gradient. Integrations: shadcn/ui MCP for component search and examples."
 ---
 
-# UI/UX Pro Max - Design Intelligence
+# UI/UX Pro Max - Design Intelligence v2.0
 
-Comprehensive design guide for web, mobile, and **desktop** applications. Contains 50+ styles, 97 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types across 10 technology stacks (including **PySide6/Qt**). Searchable database with priority-based recommendations.
+Comprehensive design guide for web, mobile, and **desktop** applications. Contains 67 styles, 96 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types across 13 technology stacks (including **PySide6/Qt**). Searchable database with priority-based recommendations and **AI-powered Design System Generator**.
+
+## What's New in v2.0
+
+### Intelligent Design System Generation
+
+The flagship feature of v2.0 is the **Design System Generator** - an AI-powered reasoning engine that analyzes your project requirements and generates a complete, tailored design system in seconds.
+
+**How it works:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ 1. USER REQUEST                                                  │
+│    "Build a landing page for my beauty spa"                      │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 2. MULTI-DOMAIN SEARCH (5 parallel searches)                    │
+│    • Product type matching (100 categories)                      │
+│    • Style recommendations (67 styles)                           │
+│    • Color palette selection (96 palettes)                       │
+│    • Landing page patterns (24 patterns)                         │
+│    • Typography pairing (57 font combinations)                   │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 3. REASONING ENGINE                                              │
+│    • Match product → UI category rules                           │
+│    • Apply style priorities (BM25 ranking)                       │
+│    • Filter anti-patterns for industry                           │
+│    • Process decision rules (JSON conditions)                    │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ 4. COMPLETE DESIGN SYSTEM OUTPUT                                │
+│    Pattern + Style + Colors + Typography + Effects              │
+│    + Anti-patterns to avoid + Pre-delivery checklist            │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**100 Industry-Specific Reasoning Rules** covering:
+- SaaS (General, Micro, Enterprise, B2B)
+- E-commerce (General, Luxury)
+- Healthcare, Fintech, Banking, Insurance
+- Education, Gaming, Entertainment
+- Beauty/Spa/Wellness, Food/Restaurant
+- Real Estate, Travel, Logistics
+- And 80+ more specialized categories
+
+Each rule includes:
+- **Recommended Pattern** - Landing page structure optimized for industry
+- **Style Priority** - Best matching UI styles (e.g., "Glassmorphism + Flat Design")
+- **Color Mood** - Industry-appropriate palettes (e.g., "Trust blue + Accent contrast")
+- **Typography Mood** - Font personality matching (e.g., "Professional + Hierarchy")
+- **Key Effects** - Animations and interactions (e.g., "Subtle hover 200-250ms")
+- **Decision Rules** - JSON conditions for dynamic recommendations
+- **Anti-Patterns** - What NOT to do (e.g., "AI purple/pink gradients" for banking)
+- **Severity** - Impact level (HIGH, MEDIUM, LOW)
 
 ## When to Apply
 
@@ -135,20 +195,21 @@ Extract key information from user request:
 - **Industry**: healthcare, fintech, gaming, education, etc.
 - **Stack**: React, Vue, Next.js, or default to `html-tailwind`
 
-### Step 2: Generate Design System (REQUIRED)
+### Step 2: Generate Design System (⚡ REQUIRED - DO THIS FIRST ⚡)
 
-**Always start with `--design-system`** to get comprehensive recommendations with reasoning:
+**CRITICAL: Always start with `--design-system`** to get the AI-powered reasoning engine recommendations:
 
 ```bash
 python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<product_type> <industry> <keywords>" --design-system [-p "Project Name"]
 ```
 
-This command:
+**Why this is required:**
 
-1. Searches 5 domains in parallel (product, style, color, landing, typography)
-2. Applies reasoning rules from `ui-reasoning.csv` to select best matches
-3. Returns complete design system: pattern, style, colors, typography, effects
-4. Includes anti-patterns to avoid
+1. **Searches 5 domains in parallel** (product, style, color, landing, typography)
+2. **Applies 100 industry-specific reasoning rules** from `ui-reasoning.csv`
+3. **Returns complete design system**: pattern, style, colors, typography, effects
+4. **Includes anti-patterns to avoid** (e.g., "AI purple/pink gradients" for banking)
+5. **Pre-delivery checklist** for professional quality
 
 **Example:**
 
@@ -156,9 +217,11 @@ This command:
 python3 .claude/skills/ui-ux-pro-max/scripts/search.py "beauty spa wellness service" --design-system -p "Serenity Spa"
 ```
 
+**Output format:** ASCII box (default) or Markdown (`-f markdown`)
+
 ### Step 3: Supplement with Detailed Searches (as needed)
 
-After getting the design system, use domain searches to get additional details:
+After getting the design system, use domain searches for additional details:
 
 ```bash
 python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
@@ -271,6 +334,47 @@ python3 .claude/skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design
 
 # Markdown - best for documentation
 python3 .claude/skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system -f markdown
+```
+
+---
+
+## Design System Persistence (Advanced)
+
+### Master + Overrides Pattern
+
+Save your design system to files for hierarchical retrieval across sessions:
+
+```bash
+# Generate and persist to design-system/MASTER.md
+python3 .claude/skills/ui-ux-pro-max/scripts/search.py "SaaS dashboard" --design-system --persist -p "MyApp"
+
+# Also create a page-specific override file
+python3 .claude/skills/ui-ux-pro-max/scripts/search.py "checkout payment" --design-system --persist -p "MyApp" --page "checkout"
+```
+
+This creates a `design-system/` folder structure:
+
+```
+design-system/
+├── MASTER.md              # Global Source of Truth (colors, typography, spacing, components)
+└── pages/
+    └── checkout.md        # Page-specific overrides (only deviations from Master)
+```
+
+**How hierarchical retrieval works:**
+
+1. When building a specific page (e.g., "Checkout"), first check `design-system/pages/checkout.md`
+2. If the page file exists, its rules **override** the Master file
+3. If not, use `design-system/MASTER.md` exclusively
+
+**Context-aware retrieval prompt:**
+
+```
+I am building the [Page Name] page.
+Please read design-system/MASTER.md.
+Also check if design-system/pages/[page-name].md exists.
+If the page file exists, prioritize its rules. If not, use the Master rules exclusively.
+Now, generate the code...
 ```
 
 ---
