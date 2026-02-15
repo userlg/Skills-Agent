@@ -31,6 +31,17 @@ Una vez en el proyecto destino, pide al agente:
 - [**Guía de Uso (SOP)**](file:///d:/Projects/AI/Skill%20Agents/HOW-TO-USE-SKILLS.md): Instrucciones detalladas de despliegue y mantenimiento.
 - [**Aprendizajes Globales**](file:///d:/Projects/AI/Skill%20Agents/GLOBAL_LEARNINGS.md): Base de conocimientos compartida.
 
+## ✨ Capacidades Clave: El Ecosistema Agentic AI
+
+Este arsenal no es solo una colección de prompts; es un **Ecosistema de IA Agentic** listo para producción, diseñado para automatización de alto rendimiento:
+
+- **🤖 Orquestación Multi-Agente**: Comportamientos especializados para coordinar tareas complejas entre múltiples agentes (LangGraph, CrewAI).
+- **🔌 Model Context Protocol (MCP)**: Soporte nativo para patrones MCP, permitiendo integración de herramientas y capacidades context-aware.
+- **⚡ Workflows de Alto Rendimiento**: Skills optimizadas para **Next.js 15 (Server Components)** y **TanStack Query v5**.
+- **🧠 Aprendizaje Basado en Instintos**: Sistemas de memoria adaptativa y loops de aprendizaje continuo que evolucionan con tu proyecto.
+- **🛡️ Seguridad Enterprise & QA**: Protocolos de seguridad (OWASP) y patrones de testing automatizado (Playwright/Vitest).
+- **🌐 Soporte Bilingüe**: Documentación y arquitectura de skills completa en Inglés y Español.
+
 ## 🧩 El Ecosistema de Skills (620+)
 
 El arsenal está organizado en categorías modulares para cubrir cada aspecto del desarrollo moderno:

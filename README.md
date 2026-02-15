@@ -31,7 +31,18 @@ Once in the target project, ask the agent:
 - [**Usage Guide (SOP)**](file:///d:/Projects/AI/Skill%20Agents/HOW-TO-USE-SKILLS.md): Detailed instructions for deployment and maintenance.
 - [**Global Learnings**](file:///d:/Projects/AI/Skill%20Agents/GLOBAL_LEARNINGS.md): Shared knowledge base.
 
-## 🧩 The Skills Ecosystem (620+)
+## ✨ Key Features: The Agentic AI Ecosystem
+
+This arsenal isn't just a collection of prompts; it's a production-ready **Agentic AI Ecosystem** designed for high-performance automation:
+
+- **🤖 Multi-Agent Orchestration**: Specialized behaviors for coordinating complex tasks between multiple AI agents using frameworks like LangGraph and CrewAI.
+- **🔌 Model Context Protocol (MCP)**: Native support for MCP patterns, enabling seamless tool integration and context-aware capabilities.
+- **⚡ High-Performance Workflows**: Production-ready skills optimized for **Next.js 15 (Server Components)** and **TanStack Query v5**.
+- **🧠 Instinct-Based Learning**: Adaptive memory systems and continuous learning loops that evolve with your project requirements.
+- **🛡️ Enterprise Security & QA**: Deep-scanned security protocols (OWASP) and automated testing patterns (Playwright/Vitest).
+- **🌐 Bilingual Support**: Full documentation and skill architecture available in both English and Spanish.
+
+## 🧩 The Skills ecosystem (620+)
 
 The arsenal is organized into modular categories to cover every aspect of modern development:
 
